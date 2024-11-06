@@ -4,14 +4,7 @@
 import './styles/style.css'
 
 // Import features and dependencies
-import { loadScripts } from './utils/scriptLoader.js'
-
-// Define required external scripts
-const EXTERNAL_SCRIPTS = [] // Removed since we're loading via HTML
-
-// Initialize Webflow
-window.Webflow ||= []
-window.Webflow.push(async () => {
+const initializeApp = async () => {
   try {
     // Dynamically import modules
     const [
@@ -114,6 +107,8 @@ window.Webflow.push(async () => {
   } catch (error) {
     console.error('Error initializing application:', error)
   }
+}
 
-  alert('This is working')
-})
+// Initialize Webflow
+window.Webflow ||= []
+window.Webflow.push(initializeApp)
