@@ -1,17 +1,8 @@
-function createBadge() {
-  // Create the badge
+export default function createBadge() {
   const badge = document.createElement('div')
-  badge.classList.add('js-badge')
-  badge.innerText = 'It works!'
-
-  // Add click envent to remove the badge from the DOM
-  badge.addEventListener('click', (event) => {
-    event.preventDefault()
-    badge.remove()
-  })
-
-  // Add the badge to the page
+  badge.classList.add('badge')
+  badge.innerHTML = `
+    <span class="badge-text">Powered by Vite</span>
+  `
   document.body.appendChild(badge)
 }
-
-export default createBadge

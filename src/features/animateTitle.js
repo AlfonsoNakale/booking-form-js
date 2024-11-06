@@ -1,17 +1,13 @@
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 
-function animateTitle() {
-  // Get the element from the DOM
-  const h1Inner = document.querySelector('span.h1-inner')
+export default function animateTitle() {
+  const title = document.querySelector('.title')
+  if (!title) return
 
-  // If it exists, play the aniamtion
-  if (h1Inner) {
-    gsap.to(h1Inner, {
-      y: 0,
-      duration: 0.6,
-      ease: 'elastic.out(1, 0.6)',
-    })
-  }
+  gsap.from(title, {
+    duration: 1,
+    y: -50,
+    opacity: 0,
+    ease: 'power3.out',
+  })
 }
-
-export default animateTitle
