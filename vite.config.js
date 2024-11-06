@@ -27,7 +27,7 @@ export default defineConfig({
     minify: true,
     manifest: true,
     rollupOptions: {
-      input: resolve(__dirname, 'src/app.js'),
+      input: resolve(__dirname, 'src/main.js'),
       output: {
         format: 'es',
         entryFileNames: 'assets/[name].[hash].js',
