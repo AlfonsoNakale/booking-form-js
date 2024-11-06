@@ -7,19 +7,12 @@ import './styles/style.css'
 import { loadScripts } from './utils/scriptLoader.js'
 
 // Define required external scripts
-const EXTERNAL_SCRIPTS = [
-  'https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js',
-  'https://cdn.jsdelivr.net/npm/flatpickr',
-  'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
-]
+const EXTERNAL_SCRIPTS = [] // Removed since we're loading via HTML
 
 // Initialize Webflow
 window.Webflow ||= []
 window.Webflow.push(async () => {
   try {
-    // Load external scripts first
-    await loadScripts(EXTERNAL_SCRIPTS)
-
     // Dynamically import modules
     const [
       { default: animateTitle },

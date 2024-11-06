@@ -34,19 +34,7 @@ export default defineConfig({
         chunkFileNames: 'assets/[name].[hash].js',
         assetFileNames: 'assets/[name].[hash].[ext]',
         compact: true,
-        globals: {
-          jquery: '$',
-          flatpickr: 'flatpickr',
-          gsap: 'gsap',
-          'choices.js': 'Choices',
-        },
       },
-      external: ['jquery'],
-    },
-  },
-  css: {
-    modules: {
-      localsConvention: 'camelCase',
     },
   },
   optimizeDeps: {
