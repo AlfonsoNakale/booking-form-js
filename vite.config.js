@@ -18,7 +18,11 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
+      '@': resolve(__dirname, 'src'),
+      '@features': resolve(__dirname, 'src/features'),
+      '@modules': resolve(__dirname, 'src/modules'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@utils': resolve(__dirname, 'src/utils'),
     },
   },
   build: {

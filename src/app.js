@@ -3,7 +3,7 @@
 // Import features and dependencies
 const initializeApp = async () => {
   try {
-    // Dynamically import modules
+    // Dynamically import modules using alias paths
     const [
       { default: animateTitle },
       { default: createBadge },
@@ -14,14 +14,14 @@ const initializeApp = async () => {
       { initializeExtras },
       { initializeVehicleSelection },
     ] = await Promise.all([
-      import('./features/animateTitle.js'),
-      import('./features/createBasge.js'),
-      import('./modules/apiChoice.js'),
-      import('./modules/apiExchange.js'),
-      import('./modules/calculations.js'),
-      import('./modules/datePickers.js'),
-      import('./modules/extras.js'),
-      import('./modules/vehicleSelection.js'),
+      import('@features/animateTitle.js'),
+      import('@features/createBasge.js'),
+      import('@modules/apiChoice.js'),
+      import('@modules/apiExchange.js'),
+      import('@modules/calculations.js'),
+      import('@modules/datePickers.js'),
+      import('@modules/extras.js'),
+      import('@modules/vehicleSelection.js'),
     ])
 
     const initializeBookingForm = async () => {
