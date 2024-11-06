@@ -121,4 +121,6 @@ window.Webflow.push(async () => {
   } catch (error) {
     console.error('Error initializing application:', error)
   }
+
+  alert('This is working')
 })
