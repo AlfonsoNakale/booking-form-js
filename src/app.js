@@ -1,8 +1,5 @@
 'use strict'
 
-// Import styles
-import './styles/style.css'
-
 // Import features and dependencies
 const initializeApp = async () => {
   try {
